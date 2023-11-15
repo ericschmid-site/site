@@ -12,35 +12,14 @@
 </ul>
 <p>Available for purchase on Amazon and Google Play shortly</p>
 
-<div id="pdf-viewer"></div>
-<script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
-<script type="text/javascript">
-  document.addEventListener('DOMContentLoaded', function() {
-    var url = 'https://ericschmid.com/Schmid_book.pdf';
-
-    var pdfjsLib = window['pdfjs-dist/build/pdf'];
-    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://mozilla.github.io/pdf.js/build/pdf.worker.js';
-
-    var pdfViewerContainer = document.getElementById('pdf-viewer');
-
-    pdfjsLib.getDocument(url).promise.then(function(pdfDoc) {
-      pdfDoc.getPage(1).then(function(page) {
-        var viewport = page.getViewport({scale: 1});
-        var canvas = document.createElement('canvas');
-        pdfViewerContainer.appendChild(canvas);
-
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
-
-        var renderContext = {
-          canvasContext: canvas.getContext('2d'),
-          viewport: viewport
-        };
-        page.render(renderContext);
-      });
-    });
-  });
-</script>
+<iframe
+  frameborder="0"
+  scrolling="no"
+  width="640"
+  height="480"
+  src="https://drive.google.com/file/d/1UB5EUTOlsj9cMikGHnmQBq_O6GW2zcpu/preview"
+> 
+</iframe>
 
 
 
