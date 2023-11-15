@@ -12,27 +12,36 @@
 </ul>
 <p>Available for purchase on Amazon and Google Play shortly</p>
 
-<div id="adobe-dc-view">
-  <p>View the book: <a href="https://ericschmid.com/Schmid_book.pdf" target="_blank">Prospectus to a Homotopic Metatheory of Language</a></p>
-</div>
+<div id="pdf-viewer"></div>
+<script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
 <script type="text/javascript">
-  function isMobileViewport() {
-    return window.innerWidth <= 768; // You can adjust this threshold as needed
-  }
+  document.addEventListener('DOMContentLoaded', function() {
+    var url = 'https://ericschmid.com/Schmid_book.pdf';
 
-  if(!isMobileViewport()) {
-    document.addEventListener("adobe_dc_view_sdk.ready", function() { 
-      var adobeDCView = new AdobeDC.View({
-        clientId: "251e37bb1e434b519d35d91610a3715b", 
-        divId: "adobe-dc-view"
-      });
-      adobeDCView.previewFile({
-        content: { location: { url: "https://ericschmid.com/Schmid_book.pdf" } },
-        metaData: { fileName: "Prospectus to a Homotopic Metatheory of Language" }
+    var pdfjsLib = window['pdfjs-dist/build/pdf'];
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://mozilla.github.io/pdf.js/build/pdf.worker.js';
+
+    var pdfViewerContainer = document.getElementById('pdf-viewer');
+
+    pdfjsLib.getDocument(url).promise.then(function(pdfDoc) {
+      pdfDoc.getPage(1).then(function(page) {
+        var viewport = page.getViewport({scale: 1});
+        var canvas = document.createElement('canvas');
+        pdfViewerContainer.appendChild(canvas);
+
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
+        var renderContext = {
+          canvasContext: canvas.getContext('2d'),
+          viewport: viewport
+        };
+        page.render(renderContext);
       });
     });
-  }
+  });
 </script>
+
 
 
 
