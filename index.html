@@ -12,9 +12,15 @@
 </ul>
 <p>Available for purchase on Amazon and Google Play shortly</p>
 
-<div id="adobe-dc-view"></div>
+<div id="adobe-dc-view">
+  <p>View the book: <a href="https://ericschmid.com/Schmid_book.pdf" target="_blank">Prospectus to a Homotopic Metatheory of Language</a></p>
+</div>
 <script type="text/javascript">
-  if(window.innerWidth > 768) { // Assuming 768px as a threshold for mobile devices
+  function isMobileDevice() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  }
+
+  if(!isMobileDevice()) {
     document.addEventListener("adobe_dc_view_sdk.ready", function() { 
       var adobeDCView = new AdobeDC.View({
         clientId: "251e37bb1e434b519d35d91610a3715b", 
@@ -25,10 +31,9 @@
         metaData: { fileName: "Prospectus to a Homotopic Metatheory of Language" }
       });
     });
-  } else {
-    document.getElementById('adobe-dc-view').innerHTML = '<p>View the book: <a href="https://ericschmid.com/Schmid_book.pdf" target="_blank">Prospectus to a Homotopic Metatheory of Language</a></p>';
   }
 </script>
+
 
 
 <p>2024:</p>
