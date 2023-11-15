@@ -16,11 +16,11 @@
   <p>View the book: <a href="https://ericschmid.com/Schmid_book.pdf" target="_blank">Prospectus to a Homotopic Metatheory of Language</a></p>
 </div>
 <script type="text/javascript">
-  function isMobileDevice() {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  function isMobileViewport() {
+    return window.innerWidth <= 768; // You can adjust this threshold as needed
   }
 
-  if(!isMobileDevice()) {
+  if(!isMobileViewport()) {
     document.addEventListener("adobe_dc_view_sdk.ready", function() { 
       var adobeDCView = new AdobeDC.View({
         clientId: "251e37bb1e434b519d35d91610a3715b", 
@@ -33,6 +33,7 @@
     });
   }
 </script>
+
 
 
 
