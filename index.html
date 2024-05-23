@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,27 +16,44 @@
             background-color: lightblue;
             padding: 20px;
             box-sizing: border-box;
-        }
-        .content {
-            width: 80%;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        .divider {
-            width: 2px;
-            background-color: gray;
+            position: fixed;
+            left: -100%;
+            height: 100%;
+            transition: left 0.3s;
         }
         .sidebar a {
             display: block;
             margin: 10px 0;
             text-decoration: none;
             color: black;
-            font-weight: bold.
+            font-weight: bold;
         }
         .sidebar a:hover {
             text-decoration: underline;
         }
-        img {
+        .toggle-btn {
+            display: none;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .divider {
+            width: 2px;
+            background-color: gray;
+        }
+        .content {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            margin-left: 0;
+        }
+        .content img {
             width: 390px;
         }
         hr.dotted {
@@ -41,15 +61,24 @@
              border-bottom: none;
         }
 
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 60%;
+            }
+            .toggle-btn {
+                display: block;
+            }
+        }
     </style>
     <title>Eric Schmid - Philosopher of Mathematics</title>
 </head>
 <body>
-    <div class="sidebar">
-        <a href="#2023">2023</a>
-        <a href="#2025">2025</a>
-        <a href="#edition">Edition Eric Schmid</a>
-        <a href="#2022">2022</a>
+    <button class="toggle-btn" onclick="toggleSidebar()">&#9776;</button>
+    <div class="sidebar" id="sidebar">
+        <a href="#2023" onclick="toggleSidebar()">2023</a>
+        <a href="#2025" onclick="toggleSidebar()">2025</a>
+        <a href="#edition" onclick="toggleSidebar()">Edition Eric Schmid</a>
+        <a href="#2022" onclick="toggleSidebar()">2022</a>
     </div>
     <div class="divider"></div>
     <div class="content">
@@ -86,7 +115,7 @@
         <br/>
         <p><strong>Slices of Life by Mattin & Asha Sheshadri</strong></p>
         <p>Published by Edition Eric Schmid and Mille Plateaux</p>
-        <img src="/mattin_asha.jpg" alt="Slices of Life" />
+        <img src="/mnt/data/mattin_asha.jpg" alt="Slices of Life" />
         <p>During the 22nd of February 2022, two years after the beginning of the COVID-19 pandemic, we took audio snippets from our everyday lives documenting our homes and surrounding urban environments, our intellectual interests and our musical tastes. We also gathered pictures with our phones. Some of the audio sources were processed, some were not. Here you get slices of our lives from two different cities, New York and Berlin – a glimpse of the fragmentation of our times through a broken sonic diary entry.</p>
         <p><em>Credits:</em></p>
         <p>Released November 14, 2023</p>
@@ -107,7 +136,7 @@
             7 Loren Chasse & Juho Toivonen - Aclod (Hive Mind)<br/>
             8 Sobbing. - Sobbing. (No label)<br/>
             9 Wolf Eyes & Model Home - More Difficult Messages (Disciples)<br/>
-            <strong>10 Asha Sheshadri & Mattin Slices Of Life (Mille Plateaux) </strong>
+            <strong>10 Asha Sheshadri & Mattin - Slices Of Life (Mille Plateaux) </strong>
         </p>
         
         <br/>
@@ -127,5 +156,19 @@
         <img src="/prolegomenon-to-a-treatise-eric-schmid-cover.jpeg" alt="Prolegomenon to a Treatise Cover" />
         <img src="/prolegomenon-to-a-treatise-eric-schmid-title.jpeg" alt="Prolegomenon to a Treatise Title Page" />
     </div>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            if (sidebar.style.left === '0px') {
+                sidebar.style.left = '-100%';
+            } else {
+                sidebar.style.left = '0px';
+            }
+        }
+    </script>
 </body>
 </html>
+
+        
+        
+     
