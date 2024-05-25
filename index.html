@@ -50,15 +50,19 @@
             padding-left: 5%;
             padding-right: 5%;
         }
-        .content img {
+        .book-covers {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .book-covers img {
             width: 100%;
-            max-width: 390px;
+            max-width: 200px;
             display: block;
-            margin: 0 auto;
         }
         hr.dotted {
-             border-top: 1px dotted;
-             border-bottom: none;
+            border-top: 1px dotted;
+            border-bottom: none;
         }
 
         @media (max-width: 768px) {
@@ -75,6 +79,10 @@
                 margin-left: 0;
                 padding-left: 10%;
                 padding-right: 10%;
+            }
+            .book-covers {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
@@ -104,8 +112,8 @@
         <hr class="dotted">
         <br/>
         <p><strong><em>HoTT: pseudoproblems, extensional propositions and intensional constructions</em></strong></p>
-<p>By Eric Schmid</p>
-<p>Published by Graham Vunderink Gallery – February 1, 2023</p>
+        <p>By Eric Schmid</p>
+        <p>Published by Graham Vunderink Gallery – February 1, 2023</p>
         <p></p><a href="https://www.grahamvunderink.com/_files/ugd/67f986_d3791306a4e74a3a936eb2e1401a198b.pdf">Download essay here</a></p>
         <br/>
         <hr class="dotted">
@@ -123,15 +131,19 @@
         <p><strong>Book: <em>Colin McLarty & Andrei Rodin: A Discussion</em></strong></p>
         <p>Published by Edition Eric Schmid</p>
         <p><a href="https://www.amazon.com/dp/B0D4YS3Q7J">Available on Amazon</a></p>
-        <img src="/colin_andrei.jpg" alt="Colin McLarty & Andrei Rodin: A Discussion" />
-        <img src="/back_colin_andrei.jpg" alt="Back Cover of Colin McLarty & Andrei Rodin: A Discussion" />
+        <div class="book-covers">
+            <img src="/colin_andrei.jpg" alt="Colin McLarty & Andrei Rodin: A Discussion" />
+            <img src="/back_colin_andrei.jpg" alt="Back Cover of Colin McLarty & Andrei Rodin: A Discussion" />
+        </div>
         
         <br/>
         <hr class="dotted">
         <br/>
         <p><strong>Slices of Life by Mattin & Asha Sheshadri</strong></p>
         <p>Published by Edition Eric Schmid and Mille Plateaux</p>
-        <img src="/mattin_asha.jpg" alt="Slices of Life" />
+        <div class="book-covers">
+            <img src="/mattin_asha.jpg" alt="Slices of Life" />
+        </div>
         <p>During the 22nd of February 2022, two years after the beginning of the COVID-19 pandemic, we took audio snippets from our everyday lives documenting our homes and surrounding urban environments, our intellectual interests and our musical tastes. We also gathered pictures with our phones. Some of the audio sources were processed, some were not. Here you get slices of our lives from two different cities, New York and Berlin – a glimpse of the fragmentation of our times through a broken sonic diary entry.</p>
         <p><em>Credits:</em></p>
         <p>Released November 14, 2023</p>
@@ -165,13 +177,15 @@
         <p><em class="serial">Reihe No. 3</em></p>
         <p>2022</p>
         <p>Co-edited by Ben Green, with fore- and afterwords by Alexander Boland, Will Fraser, Rocco Gangle, Laszlo Horvath, Hunter Hunt-Hendrix, Tim Pierson, Michael Stumpf, Connor Tomaka, Inigo Wilkins, Fernando Zalamea and a postscript by Mattin.</p>
-         <p>Available for sale at Seminary Co-op:</p>
+        <p>Available for sale at Seminary Co-op:</p>
         <p><a href="https://www.semcoop.com/prolegomenon-treatise">https://www.semcoop.com/prolegomenon-treatise</a></p>
         <p>Excerpt available on Triple Ampersand:</p>
         <p><a href="https://tripleampersand.org/introduction-to-mathemetaphysics/">https://tripleampersand.org/introduction-to-mathemetaphysics/</a></p>
 
-        <img src="/prolegomenon-to-a-treatise-eric-schmid-cover.jpeg" alt="Prolegomenon to a Treatise Cover" />
-        <img src="/prolegomenon-to-a-treatise-eric-schmid-title.jpeg" alt="Prolegomenon to a Treatise Title Page" />
+        <div class="book-covers">
+            <img src="/prolegomenon-to-a-treatise-eric-schmid-cover.jpeg" alt="Prolegomenon to a Treatise Cover" />
+            <img src="/prolegomenon-to-a-treatise-eric-schmid-title.jpeg" alt="Prolegomenon to a Treatise Title Page" />
+        </div>
         
         <br/>
         <hr class="dotted">
