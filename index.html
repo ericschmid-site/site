@@ -19,7 +19,6 @@
             left: 0;
             top: 0;
             transition: left 0.3s;
-            overflow-y: auto;
         }
         .sidebar a {
             display: block;
@@ -56,17 +55,6 @@
             display: block;
             margin: 0 auto;
         }
-        .pdf-container {
-            width: 100%;
-            height: 100vh;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-        .pdf-container object {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
         hr.dotted {
             border-top: 1px dotted;
             border-bottom: none;
@@ -83,9 +71,6 @@
                 margin-left: 0;
                 padding-left: 10%;
                 padding-right: 10%;
-            }
-            .pdf-container {
-                height: 80vh;
             }
         }
     </style>
@@ -173,11 +158,7 @@
         <p><a href="https://www.amazon.com/dp/B0D4YS3Q7J">Available on Amazon</a></p>
         <img src="/colin_andrei.jpg" alt="Colin McLarty & Andrei Rodin: A Discussion" />
         <img src="/back_colin_andrei.jpg" alt="Back Cover of Colin McLarty & Andrei Rodin: A Discussion" />
-        <div class="pdf-container">
-            <object data="https://ericschmid.com/colin_andrei_a_discussion.pdf" type="application/pdf">
-                <p>Your browser does not support PDFs. <a href="https://ericschmid.com/colin_andrei_a_discussion.pdf">Download the PDF</a>.</p>
-            </object>
-        </div>
+        <iframe src="https://drive.google.com/file/d/1rPH_hnwQ7t295fzU3d22IDDHR_LZqtDH/preview" width="640" height="480" allow="autoplay"></iframe>
         <br/>
         <hr class="dotted">
         <br/>
