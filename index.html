@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +13,10 @@
             background-color: lightblue;
             padding: 20px;
             box-sizing: border-box;
-            height: 100%;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
             transition: left 0.3s;
         }
         .sidebar a {
@@ -42,14 +44,13 @@
         .divider {
             width: 2px;
             background-color: gray;
+            margin-left: 20%;
         }
         .content {
-            width: 100%;
+            width: 80%;
             padding: 20px;
+            margin-left: 20%;
             box-sizing: border-box;
-    
-            padding-left: 5%;
-            padding-right: 5%;
         }
         .content img {
             width: 100%;
@@ -58,18 +59,19 @@
             margin: 0 auto;
         }
         hr.dotted {
-             border-top: 1px dotted;
-             border-bottom: none;
+            border-top: 1px dotted;
+            border-bottom: none;
         }
-
         @media (max-width: 768px) {
             .sidebar {
                 width: 60%;
-                position: fixed;
                 left: -100%;
             }
             .toggle-btn {
                 display: block;
+            }
+            .divider {
+                display: none;
             }
             .content {
                 width: 100%;
@@ -84,11 +86,11 @@
 <body>
     <button class="toggle-btn" onclick="toggleSidebar()">&#9776;</button>
     <div class="sidebar" id="sidebar">
-         <a href="#2022" onclick="toggleSidebar()">2022</a>
-            <a href="#peerreviewed" onclick="toggleSidebar()">Peer Reviewed</a>
+        <a href="#2022" onclick="toggleSidebar()">2022</a>
+        <a href="#peerreviewed" onclick="toggleSidebar()">Peer Reviewed</a>
         <a href="#2023" onclick="toggleSidebar()">2023</a>
         <a href="#edition" onclick="toggleSidebar()">Edition Eric Schmid</a>
-            <a href="#2025" onclick="toggleSidebar()">2025</a>
+        <a href="#2025" onclick="toggleSidebar()">2025</a>
         <a href="#conferences" onclick="toggleSidebar()">Conferences</a>
         <a href="#useful" onclick="toggleSidebar()">Useful Links</a>
     </div>
@@ -105,7 +107,7 @@
         <p><em class="serial">Reihe No. 3</em></p>
         <p>2022</p>
         <p>Co-edited by Ben Green, with fore- and afterwords by Alexander Boland, Will Fraser, Rocco Gangle, Laszlo Horvath, Hunter Hunt-Hendrix, Tim Pierson, Michael Stumpf, Connor Tomaka, Inigo Wilkins, Fernando Zalamea and a postscript by Mattin.</p>
-         <p>Available for sale at Seminary Co-op:</p>
+        <p>Available for sale at Seminary Co-op:</p>
         <p><a href="https://www.semcoop.com/prolegomenon-treatise">https://www.semcoop.com/prolegomenon-treatise</a></p>
         <p>Excerpt available on Triple Ampersand:</p>
         <p><a href="https://tripleampersand.org/introduction-to-mathemetaphysics/">https://tripleampersand.org/introduction-to-mathemetaphysics/</a></p>
@@ -114,29 +116,27 @@
         <img src="/prolegomenon-to-a-treatise-eric-schmid-title.jpeg" alt="Prolegomenon to a Treatise Title Page" />
         
         <br/>
-      
         <hr class="dotted">
         <br/>
         <p>Courses taken: Point-set Topology, Algebraic Topology, Group Theory, Complex Analysis, Real Analysis, Advanced Linear Algebra, Discrete Math, Non-Euclidean Geometry, Statistics, Multivariate Calculus, Linear Algebra</p>
         <p>Courses (in progress): Applied Category Theory, Homotopy Theory, Mathematical Logic, Homotopy Type Theory, Differential Equations</p>
         <br/>
         <p><strong>Technical Skills:</strong></p>
-<p><strong>Proficient:</strong> Python, UNIX</p>
-<p><strong>Knowledge of:</strong> Java, SQL, JavaScript, CSS, HTML</p>
-    <p><strong>Beginner:</strong> Haskell, Agda</p>
-           <br/>
+        <p><strong>Proficient:</strong> Python, UNIX</p>
+        <p><strong>Knowledge of:</strong> Java, SQL, JavaScript, CSS, HTML</p>
+        <p><strong>Beginner:</strong> Haskell, Agda</p>
+        <br/>
         <hr class="dotted">
         <br/>
         <h2 id="peerreviewed">Peer Reviewed:</h2>
         <p>Tigue, C.C., Fitzner, K.A., Alkhatib, M. et al. The value of innovation: the economics of targeted drugs for cancer. Targ Oncol 2, 113–119 (2007). https://doi.org/10.1007/s11523-007-0043-8</p>
-    <a href="https://link.springer.com/article/10.1007/s11523-007-0043-8">click here</a>
-      <br/>
+        <a href="https://link.springer.com/article/10.1007/s11523-007-0043-8">click here</a>
+        <br/>
         <br/>
         <hr class="dotted">
         <br/>
         <h2 id="2023">2023:</h2>
         <img src="/book_cover.png" alt="2023 Book Cover" />
-
         <div class='ppl-widget-container'>
             One moment, publications loading ... (or view them <a href="https://philpapers.org/profile/1359733?widget_failed=1">here</a>)
         </div>
@@ -145,18 +145,17 @@
         <hr class="dotted">
         <br/>
         <img src="/somenotes.png" alt="2023 Some Notes" />
-<p><strong><em>Some Brief Notes on Reza Negarestani’s Intelligence & Spirit</em></strong></p>
-<p>By Eric Schmid</p>
-<p>Published by Triple Ampersand Journal – October 8, 2023</p>
-        <p><<a href="https://tripleampersand.org/some-brief-notes-on-reza-negarestanis-intelligence-spirit/"> https://tripleampersand.org/some-brief-notes-on-reza-negarestanis-intelligence-spirit/</a></p>
-        
+        <p><strong><em>Some Brief Notes on Reza Negarestani’s Intelligence & Spirit</em></strong></p>
+        <p>By Eric Schmid</p>
+        <p>Published by Triple Ampersand Journal – October 8, 2023</p>
+        <p><a href="https://tripleampersand.org/some-brief-notes-on-reza-negarestanis-intelligence-spirit/"> https://tripleampersand.org/some-brief-notes-on-reza-negarestanis-intelligence-spirit/</a></p>
         <br/>
         <hr class="dotted">
         <br/>
         <p><strong><em>HoTT: pseudoproblems, extensional propositions and intensional constructions</em></strong></p>
-<p>By Eric Schmid</p>
-<p>Published by Graham Vunderink Gallery – February 1, 2023</p>
-        <p><<a href="https://www.grahamvunderink.com/_files/ugd/67f986_d3791306a4e74a3a936eb2e1401a198b.pdf"> Download essay here</a></p>
+        <p>By Eric Schmid</p>
+        <p>Published by Graham Vunderink Gallery – February 1, 2023</p>
+        <p><a href="https://www.grahamvunderink.com/_files/ugd/67f986_d3791306a4e74a3a936eb2e1401a198b.pdf">Download essay here</a></p>
         <br/>
         <hr class="dotted">
         <br/>
@@ -167,17 +166,17 @@
         <p><a href="https://www.amazon.com/dp/B0D4YS3Q7J">Available on Amazon</a></p>
         <img src="/colin_andrei.jpg" alt="Colin McLarty & Andrei Rodin: A Discussion" />
         <img src="/back_colin_andrei.jpg" alt="Back Cover of Colin McLarty & Andrei Rodin: A Discussion" />
-        <div id="adobe-dc-view" style="height: 360px; width: 500px;"></div>
-<script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
-<script type="text/javascript">
-	document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
-		var adobeDCView = new AdobeDC.View({clientId: "6850a46764844748a176101e07bfd34d", divId: "adobe-dc-view"});
-		adobeDCView.previewFile({
-			content:{location: {url: "http://ericschmid.com/colin_andrei_a_discussion.pdf"}},
-			metaData:{fileName: "colin_andrei_a_discussion.pdf"}
-		}, {embedMode: "SIZED_CONTAINER"});
-	});
-</script>
+        <div id="adobe-dc-view" style="height: 500px; width: 100%;"></div>
+        <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
+        <script type="text/javascript">
+            document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+                var adobeDCView = new AdobeDC.View({clientId: "6850a46764844748a176101e07bfd34d", divId: "adobe-dc-view"});
+                adobeDCView.previewFile({
+                    content:{location: {url: "http://ericschmid.com/colin_andrei_a_discussion.pdf"}},
+                    metaData:{fileName: "colin_andrei_a_discussion.pdf"}
+                }, {embedMode: "SIZED_CONTAINER"});
+            });
+        </script>
         <br/>
         <hr class="dotted">
         <br/>
@@ -204,7 +203,7 @@
             7 Loren Chasse & Juho Toivonen - Aclod (Hive Mind)<br/>
             8 Sobbing. - Sobbing. (No label)<br/>
             9 Wolf Eyes & Model Home - More Difficult Messages (Disciples)<br/>
-            <strong>10 Asha Sheshadri & Mattin - Slices Of Life (Mille Plateaux) </strong>
+            <strong>10 Asha Sheshadri & Mattin - Slices Of Life (Mille Plateaux)</strong>
         </p>
         
         <br/>
@@ -221,59 +220,51 @@
         <br/>
         <h2 id="conferences">Conferences</h2>
         <img src="/EHF_2024.jpg" alt="Philosophy Conference 2024 Flyer" />
-        <p><strong>Philosophy Conference</strong>
-<p>at Emily Harvey Foundation.</p>
-<p>New York, New York</p>
-<p>Sat August 17, 2024</p>
-<p>Bimodal hybrid conference</p>
-    </br>
-<p>Speakers:</p>
-<p>Dr. Rocco Gangle (Endicott)</p>
-<p>Dr. Andrei Rodin (University of Lorraine)</p>
-<p>Dr. Matt Teichman (UChicago)</p>
-<p>Corey Thuro (Independent researcher)</p>
-<p>Dr. David Corfield (Independent researcher)</p>
-<p>Dr. Alyssa Van Denburg (Northwestern)</p>
-<p>Dr. Niklas Bjarne Thompson (Argonne)</p>
-<p>JJ Kahn (NYU Tandon)</p>
-    </br>
-Co-organized by Eric Schmid & Connor Tomaka</p>
-   
-Sponsored by Eric Schmid, Connor Tomaka & Josh Metnick
-</p>
-         </br>
-         </br>
+        <p><strong>Philosophy Conference</strong></p>
+        <p>at Emily Harvey Foundation.</p>
+        <p>New York, New York</p>
+        <p>Sat August 17, 2024</p>
+        <p>Bimodal hybrid conference</p>
+        <br/>
+        <p>Speakers:</p>
+        <p>Dr. Rocco Gangle (Endicott)</p>
+        <p>Dr. Andrei Rodin (University of Lorraine)</p>
+        <p>Dr. Matt Teichman (UChicago)</p>
+        <p>Corey Thuro (Independent researcher)</p>
+        <p>Dr. David Corfield (Independent researcher)</p>
+        <p>Dr. Alyssa Van Denburg (Northwestern)</p>
+        <p>Dr. Niklas Bjarne Thompson (Argonne)</p>
+        <p>JJ Kahn (NYU Tandon)</p>
+        <br/>
+        <p>Co-organized by Eric Schmid & Connor Tomaka</p>
+        <p>Sponsored by Eric Schmid, Connor Tomaka & Josh Metnick</p>
+        <br/>
         <p><strong>Philosophy of Science Conference</strong></p>
         <p>Speakers:</p>
         <p>Reza Negarestani, Giuseppe Longo, Rocco Gangle, Ian James, and Colin McLarty</p>
         <p>Co-organized by Eric Schmid, Ben Green, and Connor Tomaka</p>
         <p>This conference was held at the Emily Harvey Foundation, NYC<br/>
         December 3, 2022</p>
-       <p><a href="https://www.youtube.com/watch?v=b18nCUTpWDM">Full video on YouTube</a></p>
-   <br/>
+        <p><a href="https://www.youtube.com/watch?v=b18nCUTpWDM">Full video on YouTube</a></p>
+        <br/>
         <hr class="dotted">
         <br/>
         
-    <h2 id="useful">Useful Links:</h2>
+        <h2 id="useful">Useful Links:</h2>
         <p><strong>Category Theory by Awodey:</strong></p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=JEO9HnzGS_LZdOCD&amp;list=PLGCr8P_YncjVjwAxrifKgcQYtbZ3zuPlb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <p><strong>Homotopy Type Theory by Harper:</strong></p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=bFu7Y7qwlt4mR3pi&amp;list=PL1-2D_rCQBarjdqnM21sOsx09CtFSVO6Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <p><strong>Mathematical Logic by Chernikov:</strong></p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=GSScxRnMFmRkccIC&amp;list=PL54Pt_mZzBqibWHgesgEICeQHnwHom8xz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <p><strong>Introduction to Homotopy Theory:</strong></p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=k7EJKillTfBjH5v8&amp;list=PLR8CgI6LLTKT7WcouQpJqs5Goxxkkz39G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-     <p><a href="/1183500345.pdf">Saunders Mac Lane on Carnap's Logical Syntax of Language</a></p>
-
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=JEO9HnzGS_LZdOCD&amp;list=PLGCr8P_YncjVjwAxrifKgcQYtbZ3zuPlb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p><strong>Homotopy Type Theory by Harper:</strong></p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=bFu7Y7qwlt4mR3pi&amp;list=PL1-2D_rCQBarjdqnM21sOsx09CtFSVO6Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p><strong>Mathematical Logic by Chernikov:</strong></p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=GSScxRnMFmRkccIC&amp;list=PL54Pt_mZzBqibWHgesgEICeQHnwHom8xz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p><strong>Introduction to Homotopy Theory:</strong></p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=k7EJKillTfBjH5v8&amp;list=PLR8CgI6LLTKT7WcouQpJqs5Goxxkkz39G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p><a href="/1183500345.pdf">Saunders Mac Lane on Carnap's Logical Syntax of Language</a></p>
     </div>
     <script>
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
-            if (sidebar.style.left === '0px') {
-                sidebar.style.left = '-100%';
-            } else {
-                sidebar.style.left = '0px';
-            }
+            sidebar.style.left = sidebar.style.left === '0px' ? '-100%' : '0px';
         }
     </script>
 </body>
