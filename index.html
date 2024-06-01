@@ -62,7 +62,7 @@
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
         }
-        .pdf-container iframe {
+        .pdf-container object {
             width: 100%;
             height: 100%;
             border: none;
@@ -174,7 +174,9 @@
         <img src="/colin_andrei.jpg" alt="Colin McLarty & Andrei Rodin: A Discussion" />
         <img src="/back_colin_andrei.jpg" alt="Back Cover of Colin McLarty & Andrei Rodin: A Discussion" />
         <div class="pdf-container">
-            <iframe src="https://ericschmid.com/colin_andrei_a_discussion.pdf" frameborder="0"></iframe>
+            <object data="https://ericschmid.com/colin_andrei_a_discussion.pdf" type="application/pdf">
+                <p>Your browser does not support PDFs. <a href="https://ericschmid.com/colin_andrei_a_discussion.pdf">Download the PDF</a>.</p>
+            </object>
         </div>
         <br/>
         <hr class="dotted">
