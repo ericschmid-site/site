@@ -5,6 +5,7 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             margin: 0;
             font-family: Arial, sans-serif;
         }
@@ -41,16 +42,12 @@
             cursor: pointer;
             z-index: 1000;
         }
-        .divider {
-            width: 2px;
-            background-color: gray;
-            margin-left: 20%;
-        }
         .content {
-            width: 80%;
+            flex: 1;
             padding: 20px;
             margin-left: 20%;
             box-sizing: border-box;
+            overflow-y: auto;
         }
         .content img {
             width: 100%;
@@ -70,11 +67,7 @@
             .toggle-btn {
                 display: block;
             }
-            .divider {
-                display: none;
-            }
             .content {
-                width: 100%;
                 margin-left: 0;
                 padding-left: 10%;
                 padding-right: 10%;
@@ -94,7 +87,6 @@
         <a href="#conferences" onclick="toggleSidebar()">Conferences</a>
         <a href="#useful" onclick="toggleSidebar()">Useful Links</a>
     </div>
-    <div class="divider"></div>
     <div class="content">
         <h1>Eric Schmid - Philosopher of Mathematics, Mathematician</h1>
         <br/>
