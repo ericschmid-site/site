@@ -167,7 +167,17 @@
         <p><a href="https://www.amazon.com/dp/B0D4YS3Q7J">Available on Amazon</a></p>
         <img src="/colin_andrei.jpg" alt="Colin McLarty & Andrei Rodin: A Discussion" />
         <img src="/back_colin_andrei.jpg" alt="Back Cover of Colin McLarty & Andrei Rodin: A Discussion" />
-        
+        <div id="adobe-dc-view" style="height: 360px; width: 500px;"></div>
+<script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
+<script type="text/javascript">
+	document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+		var adobeDCView = new AdobeDC.View({clientId: "6850a46764844748a176101e07bfd34d", divId: "adobe-dc-view"});
+		adobeDCView.previewFile({
+			content:{location: {url: "http://ericschmid.com/colin_andrei_a_discussion.pdg"}},
+			metaData:{fileName: "colin_andrei_a_discussion.pdf"}
+		}, {embedMode: "SIZED_CONTAINER"});
+	});
+</script>
         <br/>
         <hr class="dotted">
         <br/>
@@ -253,7 +263,9 @@ Sponsored by Eric Schmid, Connor Tomaka & Josh Metnick
     <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=GSScxRnMFmRkccIC&amp;list=PL54Pt_mZzBqibWHgesgEICeQHnwHom8xz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <p><strong>Introduction to Homotopy Theory:</strong></p>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=k7EJKillTfBjH5v8&amp;list=PLR8CgI6LLTKT7WcouQpJqs5Goxxkkz39G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-     </div>
+     <p><a href="/1183500345.pdf">Saunders Mac Lane on Carnap's Logical Syntax of Language</a></p>
+
+    </div>
     <script>
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
