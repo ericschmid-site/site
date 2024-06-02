@@ -19,6 +19,7 @@
             left: 0;
             top: 0;
             transition: left 0.3s;
+            overflow-y: auto;
         }
         .sidebar a {
             display: block;
@@ -158,7 +159,9 @@
         <p><a href="https://www.amazon.com/dp/B0D4YS3Q7J">Available on Amazon</a></p>
         <img src="/colin_andrei.jpg" alt="Colin McLarty & Andrei Rodin: A Discussion" />
         <img src="/back_colin_andrei.jpg" alt="Back Cover of Colin McLarty & Andrei Rodin: A Discussion" />
-        <iframe src="https://drive.google.com/file/d/1rPH_hnwQ7t295fzU3d22IDDHR_LZqtDH/preview" width="640" height="480" allow="autoplay"></iframe>
+        <div class="pdf-container">
+            <iframe src="https://drive.google.com/file/d/1rPH_hnwQ7t295fzU3d22IDDHR_LZqtDH/preview" width="640" height="480" allow="autoplay"></iframe>
+        </div>
         <br/>
         <hr class="dotted">
         <br/>
@@ -246,7 +249,7 @@
     <script>
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
-            sidebar.style.left = sidebar.style.left === '0px' ? '-100%' : '0px';
+            sidebar.style.left = (sidebar.style.left === '0px' || sidebar.style.left === '') ? '-100%' : '0px';
         }
     </script>
 </body>
