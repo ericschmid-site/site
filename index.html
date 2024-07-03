@@ -8,6 +8,7 @@
             margin: 0;
             font-family: Arial, sans-serif;
         }
+	div.arxivfeed {margin-bottom: 5px; width:700px;}
         .sidebar {
             width: 20%;
             background-color: lightblue;
@@ -89,16 +90,9 @@
         }
     </style>
     <title>Eric Schmid - Philosopher of Mathematics</title>
-	<script type="text/javascript">
-<!--
-var arxiv_authorid = "e_schmid_2";
-//--></script>
-<style type="text/css">
-div.arxivfeed {margin-bottom: 5px; width:700px;}
-</style>
-<script type="text/javascript" src="https://arxiv.org/js/myarticles.js">
-</script>
+	<script type="text/javascript" src="https://arxiv.org/js/myarticles.js"></script>
 </head>
+
 <body>
     <button class="toggle-btn" onclick="toggleSidebar()">&#9776;</button>
     <div class="sidebar" id="sidebar">
@@ -118,7 +112,9 @@ div.arxivfeed {margin-bottom: 5px; width:700px;}
         <hr class="dotted">
         <br/>
         <h2 id="new">NEW:</h2>
+    </div>
 <div id="arxivfeed"></div>
+	<div class="content">
   <img src="/newbook.png" alt="Collected Writings Cover" />
         <h4><strong><em>Collected Writings: 2011-2024</em></strong></h4>
         <p>by Eric Schmid</p>
@@ -317,6 +313,7 @@ Published by Editions Cox, 2024.</p>
         <p><a href="https://archive-pml.github.io/martin-lof/pdfs/Martin-Lof-Analytic-and-Synthetic-Judgements-in-Type-Theory.pdf">Per Martin-Löf - Analytic and Synthetic Judgements in Type Theory</a></p>
     </div>
     <script>
+	var arxiv_authorid = "schmid_e_2";
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const isSidebarVisible = getComputedStyle(sidebar).left === '0px';
