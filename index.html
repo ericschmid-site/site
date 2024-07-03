@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric Schmid - Philosopher of Mathematics</title>
     <style>
         body {
             display: flex;
             margin: 0;
             font-family: Arial, sans-serif;
         }
-	div.arxivfeed {margin-bottom: 5px; width:700px;}
+        div.arxivfeed { margin-bottom: 5px; width: 700px; }
         .sidebar {
             width: 20%;
             background-color: lightblue;
@@ -50,27 +52,6 @@
             box-sizing: border-box;
             overflow-y: auto;
         }
-        .content img {
-            width: 100%;
-            max-width: 390px;
-            display: block;
-            margin: 0 auto;
-        }
-        .pdf-container {
-            width: 100%;
-            height: 100vh;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-        .pdf-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        hr.dotted {
-            border-top: 1px dotted;
-            border-bottom: none;
-        }
         @media (max-width: 768px) {
             .sidebar {
                 width: 60%;
@@ -84,18 +65,13 @@
                 padding-left: 10%;
                 padding-right: 10%;
             }
-            .pdf-container {
-                height: 80vh;
-            }
         }
     </style>
-    <title>Eric Schmid - Philosopher of Mathematics</title>
-	 <script type="text/javascript">
+    <script type="text/javascript">
         var arxiv_authorid = "schmid_e_2";
-	 </script>
-	<script type="text/javascript" src="https://arxiv.org/js/myarticles.js"></script>
+    </script>
+    <script type="text/javascript" src="https://arxiv.org/js/myarticles.js"></script>
 </head>
-
 <body>
     <button class="toggle-btn" onclick="toggleSidebar()">&#9776;</button>
     <div class="sidebar" id="sidebar">
@@ -106,7 +82,7 @@
         <a href="#edition" onclick="toggleSidebar()">Edition Eric Schmid</a>
         <a href="#2025" onclick="toggleSidebar()">2025</a>
         <a href="#conferences" onclick="toggleSidebar()">Conferences</a>
-	    <a href="#art" onclick="toggleSidebar()">Art</a>
+        <a href="#art" onclick="toggleSidebar()">Art</a>
         <a href="#useful" onclick="toggleSidebar()">Useful Links</a>
     </div>
     <div class="content">
@@ -115,9 +91,7 @@
         <hr class="dotted">
         <br/>
         <h2 id="new">NEW:</h2>
-    </div>
-<div id="arxivfeed"></div>
-	<div class="content">
+        <div id="arxivfeed"></div>
   <img src="/newbook.png" alt="Collected Writings Cover" />
         <h4><strong><em>Collected Writings: 2011-2024</em></strong></h4>
         <p>by Eric Schmid</p>
