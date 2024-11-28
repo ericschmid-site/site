@@ -1,43 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Eric Schmid - GCAS Researcher</title>
-    <script>
-    function openBio() {
-        const spans = document.querySelectorAll('span.jsx-2862269320');
-        for (const span of spans) {
-            if (span.textContent === 'See Info') {
-                const card = span.closest('.eapp-team-showcase-member-card-grid-component');
-                if (card && card.textContent.includes('Eric Schmid')) {
-                    span.click();
-                    return true;
-                }
-            }
-        }
-        return false;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="5; url=https://gcas.ie/why-gcas/research/student-researchers">
+  <title>Eric Schmid - Forwarding to GCAS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
     }
-
-    function checkAndOpen() {
-        if (!openBio()) {
-            setTimeout(checkAndOpen, 1000);
-        }
+    .loading {
+      font-size: 18px;
+      color: #555;
     }
-
-    if (window.location.href.includes('gcas.ie')) {
-        // We're on the GCAS page
-        if (window.location.href.includes('open=eric')) {
-            // Wait for page load and try to open bio
-            window.addEventListener('load', function() {
-                setTimeout(checkAndOpen, 1000);
-            });
-        }
-    } else {
-        // Redirect to GCAS with our parameter
-        window.location.href = 'https://gcas.ie/why-gcas/research/student-researchers?open=eric';
-    }
-    </script>
+  </style>
 </head>
 <body>
-    <p>Redirecting to Eric Schmid's bio...</p>
+  <h1>Redirecting to the GCAS site...</h1>
+  <p class="loading">If you are not redirected in 5 seconds, <a href="https://gcas.ie/why-gcas/research/student-researchers">click here</a>.</p>
+
+  <script>
+    // Ensure the script runs after the GCAS site loads
+    window.onload = () => {
+      // Redirect to GCAS site
+      window.location.href = "https://gcas.ie/why-gcas/research/student-researchers";
+
+      // Once on the GCAS page, simulate the "See Info" button click
+      setTimeout(() => {
+        try {
+          // Select the "See Info" button
+          const seeInfoButton = document.querySelector('.jsx-2862269320.eapp-team-showcase-member-card-see-more-component');
+          if (seeInfoButton) {
+            // Simulate a click to trigger the pop-up
+            seeInfoButton.click();
+            console.log('"See Info" button clicked. Pop-up should open if it is linked to this event.');
+          } else {
+            console.log('Could not find the "See Info" button.');
+          }
+        } catch (error) {
+          console.error('Error triggering pop-up:', error);
+        }
+      }, 5000); // Delay to ensure the page has loaded fully
+    };
+  </script>
 </body>
 </html>
