@@ -39,9 +39,10 @@
             
             // Wait for the bio content to load
             const observer = new MutationObserver(() => {
-              const bioContent = document.querySelector('.bio-class-selector'); // Replace with actual selector for bio
+              const bioContent = document.querySelector('.jsx-2432973540.eapp-team-showcase-member-card-info-component');
               if (bioContent) {
                 console.log('Bio content loaded:', bioContent.innerText);
+                alert('Bio content: ' + bioContent.innerText); // Display bio content in an alert
                 observer.disconnect(); // Stop observing once content is loaded
               }
             });
