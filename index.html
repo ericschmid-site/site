@@ -3,29 +3,33 @@
 <head>
     <title>Eric Schmid - GCAS Researcher</title>
     <script>
-    // First try to find and click Eric's bio
+    function findAndClickBio() {
+        // Look for the specific element with Eric's name
+        const seeInfoButtons = document.querySelectorAll('.jsx-2862269320');
+        for (let button of seeInfoButtons) {
+            // Find the parent card and check if it contains Eric's name
+            const card = button.closest('.eapp-team-showcase-member-card-grid-component');
+            if (card && card.textContent.includes('Eric Schmid')) {
+                button.click();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function attemptToOpenBio() {
+        if (!findAndClickBio()) {
+            // If unsuccessful, try again after a short delay
+            setTimeout(attemptToOpenBio, 500);
+        }
+    }
+
     window.onload = function() {
-        // If we're on the GCAS page
         if (window.location.href.includes('gcas.ie')) {
-            // Wait for the page to fully load
-            setTimeout(function() {
-                // Find all researcher names
-                const names = document.querySelectorAll('.eapp-team-showcase-member-card-info-name');
-                for (let name of names) {
-                    // When we find Eric's name
-                    if (name.textContent.includes('Eric Schmid')) {
-                        // Find the parent card and click its "See Info" button
-                        const card = name.closest('.eapp-team-showcase-member-card-grid-component');
-                        if (card) {
-                            const seeInfoBtn = card.querySelector('.eapp-team-showcase-member-card-see-more-component');
-                            if (seeInfoBtn) seeInfoBtn.click();
-                        }
-                        break;
-                    }
-                }
-            }, 2000); // Wait 2 seconds for the widget to load
+            // Start trying to find and click the bio after a short initial delay
+            setTimeout(attemptToOpenBio, 1000);
         } else {
-            // If we're not on the GCAS page, redirect there
+            // Redirect to GCAS page if we're not there yet
             window.location.href = 'https://gcas.ie/why-gcas/research/student-researchers';
         }
     }
