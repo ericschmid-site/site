@@ -35,7 +35,19 @@
           if (seeInfoButton) {
             // Simulate a click to trigger the pop-up
             seeInfoButton.click();
-            console.log('"See Info" button clicked. Pop-up should open if it is linked to this event.');
+            console.log('"See Info" button clicked. Waiting for bio content...');
+            
+            // Wait for the bio content to load
+            const observer = new MutationObserver(() => {
+              const bioContent = document.querySelector('.bio-class-selector'); // Replace with actual selector for bio
+              if (bioContent) {
+                console.log('Bio content loaded:', bioContent.innerText);
+                observer.disconnect(); // Stop observing once content is loaded
+              }
+            });
+
+            // Observe changes in the DOM
+            observer.observe(document.body, { childList: true, subtree: true });
           } else {
             console.log('Could not find the "See Info" button.');
           }
