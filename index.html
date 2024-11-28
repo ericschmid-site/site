@@ -3,35 +3,37 @@
 <head>
     <title>Eric Schmid - GCAS Researcher</title>
     <script>
-    function findAndClickBio() {
-        // Look for the specific element with Eric's name
-        const seeInfoButtons = document.querySelectorAll('.jsx-2862269320');
-        for (let button of seeInfoButtons) {
-            // Find the parent card and check if it contains Eric's name
-            const card = button.closest('.eapp-team-showcase-member-card-grid-component');
-            if (card && card.textContent.includes('Eric Schmid')) {
-                button.click();
-                return true;
+    function openBio() {
+        const spans = document.querySelectorAll('span.jsx-2862269320');
+        for (const span of spans) {
+            if (span.textContent === 'See Info') {
+                const card = span.closest('.eapp-team-showcase-member-card-grid-component');
+                if (card && card.textContent.includes('Eric Schmid')) {
+                    span.click();
+                    return true;
+                }
             }
         }
         return false;
     }
 
-    function attemptToOpenBio() {
-        if (!findAndClickBio()) {
-            // If unsuccessful, try again after a short delay
-            setTimeout(attemptToOpenBio, 500);
+    function checkAndOpen() {
+        if (!openBio()) {
+            setTimeout(checkAndOpen, 1000);
         }
     }
 
-    window.onload = function() {
-        if (window.location.href.includes('gcas.ie')) {
-            // Start trying to find and click the bio after a short initial delay
-            setTimeout(attemptToOpenBio, 1000);
-        } else {
-            // Redirect to GCAS page if we're not there yet
-            window.location.href = 'https://gcas.ie/why-gcas/research/student-researchers';
+    if (window.location.href.includes('gcas.ie')) {
+        // We're on the GCAS page
+        if (window.location.href.includes('open=eric')) {
+            // Wait for page load and try to open bio
+            window.addEventListener('load', function() {
+                setTimeout(checkAndOpen, 1000);
+            });
         }
+    } else {
+        // Redirect to GCAS with our parameter
+        window.location.href = 'https://gcas.ie/why-gcas/research/student-researchers?open=eric';
     }
     </script>
 </head>
