@@ -1,62 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="5; url=https://gcas.ie/why-gcas/research/student-researchers">
-  <title>Eric Schmid - Forwarding to GCAS</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 50px;
-    }
-    .loading {
-      font-size: 18px;
-      color: #555;
-    }
-  </style>
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0; URL='https://sites.google.com/gcas.ie/eric-schmid/'" />
 </head>
 <body>
-  <h1>Redirecting to the GCAS site...</h1>
-  <p class="loading">If you are not redirected in 5 seconds, <a href="https://gcas.ie/why-gcas/research/student-researchers">click here</a>.</p>
-
-  <script>
-    // Ensure the script runs after the GCAS site loads
-    window.onload = () => {
-      // Redirect to GCAS site
-      window.location.href = "https://gcas.ie/why-gcas/research/student-researchers";
-
-      // Once on the GCAS page, simulate the "See Info" button click
-      setTimeout(() => {
-        try {
-          // Select the "See Info" button
-          const seeInfoButton = document.querySelector('.jsx-2862269320.eapp-team-showcase-member-card-see-more-component');
-          if (seeInfoButton) {
-            // Simulate a click to trigger the pop-up
-            seeInfoButton.click();
-            console.log('"See Info" button clicked. Waiting for bio content...');
-            
-            // Wait for the bio content to load
-            const observer = new MutationObserver(() => {
-              const bioContent = document.querySelector('.jsx-2432973540.eapp-team-showcase-member-card-info-component');
-              if (bioContent) {
-                console.log('Bio content loaded:', bioContent.innerText);
-                alert('Bio content: ' + bioContent.innerText); // Display bio content in an alert
-                observer.disconnect(); // Stop observing once content is loaded
-              }
-            });
-
-            // Observe changes in the DOM
-            observer.observe(document.body, { childList: true, subtree: true });
-          } else {
-            console.log('Could not find the "See Info" button.');
-          }
-        } catch (error) {
-          console.error('Error triggering pop-up:', error);
-        }
-      }, 5000); // Delay to ensure the page has loaded fully
-    };
-  </script>
+    <p>If you are not redirected automatically, follow this <a href="https://sites.google.com/gcas.ie/eric-schmid/">link to your site</a>.</p>
 </body>
 </html>
